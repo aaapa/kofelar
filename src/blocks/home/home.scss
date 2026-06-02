@@ -1,0 +1,95 @@
+.home {
+  padding: ptrm(60) ptrm(0) ptrm(50);
+  position: relative;
+  background: transparent;
+
+  @include mobile {
+    padding: ptrm(30) ptrm(0) ptrm(40);
+  }
+
+  &__inner {
+    min-height: ptrm(520);
+    display: flex;
+    gap: ptrm(40);
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+      gap: ptrm(20);
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    gap: ptrm(30);
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__desc {
+    color: rgba(0, 24, 48, 0.8);
+    max-width: ptrm(475);
+    font-family: "Onest", sans-serif;
+    font-weight: 500;
+    font-size: ptrm(20);
+    line-height: 130%;
+    letter-spacing: 0;
+  }
+
+  &__title {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 500;
+    @include fluid-text(36, 20);
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #001830;
+  }
+
+  &__actions {
+    display: flex;
+    gap: ptrm(5);
+    align-items: center;
+
+    .button--main:not(.button--rounded) {
+      padding-left: ptrm(48);
+      padding-right: ptrm(48);
+    }
+  }
+
+  &__gradient {
+    position: absolute;
+    width: ptrm(784);
+    height: ptrm(677);
+    top: ptrm(-78);
+    left: ptrm(754);
+    background: linear-gradient(180deg, #195899 20%, #7BB6E2 40%);
+    opacity: 0.50;
+    pointer-events: none;
+    z-index: -2;
+    border-radius: 50%;
+    filter: blur(ptrm(160));
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__art {
+    width: ptrm(949);
+    height: ptrm(616);
+    object-fit: contain;
+    position: absolute;
+    top: ptrm(-93);
+    left: ptrm(744);
+    pointer-events: none;
+    z-index: -1;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}

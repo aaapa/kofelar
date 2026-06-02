@@ -1,0 +1,29 @@
+.input {
+  color: var(--color-dark);
+  width: 100%;
+  height: ptrm(50);
+  padding: ptrm(0) ptrm(24);
+  font-size: ptrm(14);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  outline: none;
+  transition: border-color 0.2s ease;
+  background-color: var(--color-white);
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.45);
+  }
+
+  &:focus-visible {
+    border-color: var(--color-dark);
+  }
+
+  &--textarea {
+    height: auto;
+    min-height: ptrm(80);
+    padding-top: ptrm(14);
+    padding-bottom: ptrm(14);
+    border-radius: var(--radius-md);
+    resize: none;
+  }
+}

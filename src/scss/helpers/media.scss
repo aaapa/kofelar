@@ -1,0 +1,43 @@
+@use "functions" as *;
+
+$tablet: 1100;
+$mobile: 768;
+$mobile-s: 480;
+
+@mixin tablet {
+  @media (width <= ptrm($tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (width <= ptrm($mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile-s {
+  @media (width <= ptrm($mobile-s)) {
+    @content;
+  }
+}
+
+@mixin mobile-above {
+  @media (width > ptrm($mobile)) {
+    @content;
+  }
+}
+
+@mixin tablet-above {
+  @media (width > ptrm($tablet)) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover:hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

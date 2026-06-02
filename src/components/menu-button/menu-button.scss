@@ -1,0 +1,44 @@
+.menu-button {
+  color: var(--color-white);
+  width: ptrm(40);
+  height: ptrm(40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-dark);
+
+  @include tablet {
+    display: inline-flex;
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: ptrm(5);
+  }
+
+  &__line {
+    width: ptrm(18);
+    height: ptrm(2);
+    display: block;
+    background: var(--color-white);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    transform-origin: center;
+
+    &.is-open {
+      &:nth-child(1) {
+        transform: translateY(ptrm(7)) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(ptrm(-7)) rotate(-45deg);
+      }
+    }
+  }
+}

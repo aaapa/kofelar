@@ -1,0 +1,23 @@
+.chip {
+  color: var(--color-text);
+  height: ptrm(36);
+  padding: ptrm(0) ptrm(18);
+  display: inline-flex;
+  align-items: center;
+  font-size: ptrm(13);
+  font-weight: 50ptrm(0);
+  border-radius: var(--radius-pill);
+  border: 1px solid #E6EEF5;
+  transition: background 0.2s ease, color 0.2s ease;
+  background: var(--color-white);
+
+  @include hover {
+    background: #F1F7FC;
+  }
+
+  &.is-active {
+    color: var(--color-white);
+    border-color: var(--color-dark);
+    background: var(--color-dark);
+  }
+}

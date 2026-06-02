@@ -1,0 +1,126 @@
+.support {
+  padding: var(--svc-padding-y-lg) ptrm(0);
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+
+  &__inner {
+    &.container {
+      padding: ptrm(0) ptrm(70);
+
+      @include tablet {
+        padding: ptrm(0) ptrm(30);
+      }
+
+      @include mobile {
+        padding: ptrm(0) ptrm(18);
+      }
+    }
+  }
+
+  &__head {
+    max-width: ptrm(880);
+    margin-bottom: ptrm(30);
+  }
+
+  &__title {
+    margin-bottom: ptrm(18);
+    font-size: var(--svc-title-size);
+    font-weight: 700;
+  }
+
+  &__text {
+    color: var(--color-text-muted);
+    font-size: ptrm(14);
+    line-height: 157.1%;
+  }
+
+  &__sub {
+    margin: ptrm(30) ptrm(0) ptrm(22);
+    font-size: ptrm(24);
+    font-weight: 700;
+  }
+
+  &__grid {
+    display: grid;
+    gap: ptrm(20);
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__bg-art {
+    width: ptrm(380);
+    position: absolute;
+    bottom: ptrm(-40);
+    left: ptrm(-120);
+    z-index: -1;
+    opacity: 0.85;
+    pointer-events: none;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    max-width: ptrm(270);
+    min-height: ptrm(270);
+    padding: ptrm(28) ptrm(30);
+    justify-self: end;
+    font-size: ptrm(16);
+    font-weight: 600;
+    line-height: 137.5%;
+    border-radius: var(--svc-radius);
+    border: var(--svc-border);
+    background: rgba(255, 255, 255, 0.40);
+
+    @include mobile {
+      max-width: none;
+      min-height: ptrm(150);
+    }
+
+    &--dark {
+      color: var(--color-white);
+      background: rgba(0, 24, 48, 0.90);
+    }
+
+    &--white {
+      background: var(--color-white);
+    }
+
+    &--with-art {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &--mid {
+      background-color: rgba(211, 230, 245, 0.50);
+    }
+
+    &--long {
+      max-width: none;
+    }
+
+    &:nth-child(4) {
+      grid-column: 2;
+    }
+
+    &:nth-child(5) {
+      grid-column: 3;
+    }
+  }
+
+  &__card-art {
+    width: ptrm(220);
+    position: absolute;
+    right: ptrm(-20);
+    bottom: ptrm(-20);
+    opacity: 0.95;
+    pointer-events: none;
+  }
+}

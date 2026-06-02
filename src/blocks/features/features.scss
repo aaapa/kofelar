@@ -1,0 +1,138 @@
+.features {
+  padding: ptrm(70) ptrm(0);
+  background: transparent;
+
+  &__inner {
+    &.container {
+      padding: ptrm(0) ptrm(70);
+
+      @include tablet { padding: ptrm(0) ptrm(30); }
+      @include mobile { padding: ptrm(0) ptrm(18); }
+    }
+  }
+
+  &__title {
+    margin-bottom: ptrm(36);
+    font-size: ptrm(32);
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: ptrm(387) ptrm(386) ptrm(367);
+    row-gap: ptrm(20);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      row-gap: ptrm(30);
+    }
+  }
+
+  &__gradient {
+    position: absolute;
+    width: ptrm(639);
+    height: ptrm(857);
+    left: ptrm(-295);
+    top: ptrm(-490);
+    background: rgba(25, 88, 153, 0.1);
+    filter: blur(ptrm(75));
+    transform: rotate(127.06deg);
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+.feature-card {
+  height: ptrm(248);
+  padding: ptrm(46) ptrm(30) ptrm(24);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  align-self: start;
+  border-radius: ptrm(40);
+  background: rgba(211, 230, 245, 0.3);
+
+  // Pixel-perfect widths from Figma (cards narrower than their columns = visual gaps)
+  &:nth-child(1) { width: ptrm(258); } // Дашборд: col 387px, gap→right = 129px
+  &:nth-child(2) { width: ptrm(366); } // Финансовый учёт: col 386px, gap→right = 20px
+  &:nth-child(3) { width: ptrm(258); } // Управление сотр: col 367px
+  &:nth-child(4) { width: ptrm(367); } // Аналитика: col 387px, gap→right = 20px
+  &:nth-child(5) { width: ptrm(257); } // Управление точками: col 386px, gap→right = 129px
+  &:nth-child(6) { width: ptrm(367); } // Интеграция: col 367px
+
+  &__title {
+    color: var(--color-dark);
+    margin-bottom: ptrm(11);
+    font-size: ptrm(20);
+    font-weight: 500;
+    line-height: 130%;
+  }
+
+  &__sub {
+    color: var(--color-text-muted);
+    font-size: ptrm(13);
+    line-height: 130.8%;
+  }
+
+  &__icon {
+    position: absolute;
+
+    // Дашборд: left=86.96 top=109.09 w=166 h=133 rotate=4.58deg
+    &--dashboard {
+      width: ptrm(166);
+      height: ptrm(133);
+      right: ptrm(5);
+      bottom: ptrm(6);
+      transform: rotate(4.58deg);
+    }
+
+    // Финансовый учёт (pig): left=166 top=83 w=189 h=196, card 366x248
+    &--pig {
+      width: ptrm(189);
+      height: ptrm(196);
+      right: ptrm(11);
+      bottom: ptrm(-31);
+    }
+
+    // Управление сотр (person): left=101 top=83.5 w=193 h=184, card 258x248
+    &--person {
+      width: ptrm(193);
+      height: ptrm(184);
+      right: ptrm(-36);
+      bottom: ptrm(-20);
+    }
+
+    // Аналитика: left=148 top=23 w=241 h=225, card 367x248
+    &--analytics {
+      width: ptrm(241);
+      height: ptrm(225);
+      right: ptrm(-22);
+      bottom: 0;
+    }
+
+    // Управление точками (notebook): left=98 top=100.5 w=147 h=163, card 257x248
+    &--notebook {
+      width: ptrm(147);
+      height: ptrm(163);
+      right: ptrm(12);
+      bottom: ptrm(-16);
+    }
+
+    // Интеграция (calculator): left=202 top=84 w=188 h=188 rotate=-4.84deg, card 367x248
+    &--calculator {
+      width: ptrm(188);
+      height: ptrm(188);
+      right: ptrm(-23);
+      bottom: ptrm(-24);
+      transform: rotate(-4.84deg);
+    }
+  }
+
+  &__icon-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,68 @@
+.modal {
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  inset: ptrm(0);
+  border: none;
+  background: transparent;
+
+  &::backdrop {
+    background: rgba(17, 27, 34, 0.55);
+    backdrop-filter: blur(4px);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: ptrm(540);
+    max-height: 90dvh;
+    padding: ptrm(50) ptrm(60);
+    position: relative;
+    overflow-y: auto;
+    border-radius: ptrm(30);
+    box-shadow: ptrm(0) 30px 80px rgba(17, 27, 34, 0.25);
+    background: var(--color-bg-blue);
+
+    @include mobile {
+      padding: ptrm(38) ptrm(24) ptrm(30);
+      border-radius: ptrm(22);
+    }
+  }
+
+  &__close {
+    color: var(--color-dark);
+    width: ptrm(32);
+    height: ptrm(32);
+    position: absolute;
+    top: ptrm(22);
+    right: ptrm(22);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+    background: rgba(255, 255, 255, 0.6);
+
+    @include hover {
+      background: var(--color-white);
+    }
+  }
+
+  &__title {
+    color: var(--color-dark);
+    margin-bottom: ptrm(28);
+    font-size: ptrm(22);
+    line-height: 1.25;
+    font-weight: 700;
+
+    @include mobile {
+      font-size: ptrm(18);
+    }
+  }
+}

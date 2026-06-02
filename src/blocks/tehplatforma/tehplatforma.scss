@@ -1,0 +1,130 @@
+.page-tehplatforma {
+  background: #E9F7FF;
+}
+
+.tehplatforma {
+  padding: ptrm(60) ptrm(0) ptrm(50);
+  position: relative;
+  background: transparent;
+
+  &__inner {
+    min-height: ptrm(520);
+    display: flex;
+    flex-direction: column;
+    gap: ptrm(40);
+    position: relative;
+    z-index: 1;
+
+    &.container {
+      padding: ptrm(0) ptrm(70);
+
+      @include tablet {
+        padding: ptrm(0) ptrm(30);
+      }
+
+      @include mobile {
+        padding: ptrm(0) ptrm(18);
+      }
+    }
+  }
+
+  &__content {
+    max-width: ptrm(560);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    color: #001830;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 500;
+    @include fluid-text(36, 20);
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__lead {
+    color: rgba(0, 24, 48, 0.8);
+    max-width: ptrm(475);
+    margin-top: ptrm(26);
+    font-family: "Onest", sans-serif;
+    font-weight: 500;
+    font-size: ptrm(20);
+    line-height: 130%;
+  }
+
+  &__cta-group {
+    margin-top: ptrm(38);
+    display: flex;
+    flex-direction: column;
+    gap: ptrm(18);
+  }
+
+  &__btn-row {
+    display: flex;
+    gap: ptrm(5);
+    align-items: center;
+  }
+
+  &__gradient {
+    position: absolute;
+    width: ptrm(784);
+    height: ptrm(677);
+    top: ptrm(-133);
+    left: ptrm(580);
+    background: linear-gradient(180deg, #195899 20%, #7BB6E2 40%);
+    opacity: 0.61;
+    pointer-events: none;
+    z-index: -2;
+    border-radius: 50%;
+    filter: blur(ptrm(160));
+  }
+
+  &__art {
+    width: ptrm(1067);
+    height: ptrm(694);
+    object-fit: contain;
+    position: absolute;
+    top: ptrm(-143);
+    left: ptrm(439);
+    pointer-events: none;
+    z-index: -1;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__features {
+    margin-top: ptrm(-30);
+    padding: ptrm(30) ptrm(40);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: ptrm(40);
+    position: relative;
+    z-index: 3;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(211, 230, 245, 0.8);
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.7);
+
+    .advantage {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: ptrm(16);
+
+      &__icon {
+        flex-shrink: 0;
+        width: ptrm(32);
+        height: ptrm(32);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.title {
+  color: var(--color-dark);
+  font-family: "Onest", sans-serif;
+
+  &--big {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 500;
+    font-size: ptrm(36);
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #001830;
+  }
+
+  &--medium {
+    font-weight: 700;
+    font-size: ptrm(36);
+    line-height: 1.15;
+  }
+
+  &--small {
+    font-weight: 600;
+    font-size: ptrm(22);
+    line-height: 1.3;
+  }
+}

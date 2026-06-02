@@ -1,0 +1,71 @@
+.form {
+  &__field {
+    margin-bottom: ptrm(18);
+    display: flex;
+    flex-direction: column;
+    gap: ptrm(10);
+  }
+
+  &__label {
+    color: var(--color-dark);
+    font-size: ptrm(17);
+    line-height: 129.4%;
+    font-weight: 600;
+  }
+
+  &__check {
+    color: var(--color-text-muted);
+    margin: ptrm(14) ptrm(0) ptrm(22);
+    display: inline-flex;
+    align-items: center;
+    gap: ptrm(12);
+    font-size: ptrm(13);
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__check-input {
+    width: ptrm(18);
+    height: ptrm(18);
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1.5px solid rgba(0, 0, 0, 0.35);
+    border-radius: ptrm(4);
+    cursor: pointer;
+    background: var(--color-white);
+
+    &:checked {
+      border-color: var(--color-dark);
+      background: var(--color-dark);
+    }
+
+    &:checked::after {
+      content: "";
+      width: ptrm(6);
+      height: ptrm(11);
+      position: absolute;
+      left: ptrm(4);
+      top: ptrm(0);
+      border: solid var(--color-white);
+      border-width: ptrm(0) 2px 2px ptrm(0);
+      transform: rotate(45deg);
+    }
+  }
+
+  &__submit {
+    color: var(--color-white);
+    width: 100%;
+    height: ptrm(60);
+    font-size: ptrm(17);
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: background 0.2s ease;
+    background: var(--color-dark);
+
+    @include hover {
+      background: #1d2c36;
+    }
+  }
+}

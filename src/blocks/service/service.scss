@@ -1,0 +1,90 @@
+.page-service {
+  background: #E9F7FF;
+}
+
+.service {
+  padding: var(--svc-padding-y) ptrm(0) ptrm(50);
+  position: relative;
+  background: transparent;
+
+  &__inner {
+    min-height: ptrm(500);
+    display: flex;
+    flex-direction: column;
+    gap: ptrm(40);
+    position: relative;
+
+    &.container {
+      padding: ptrm(0) ptrm(70);
+
+      @include tablet {
+        padding: ptrm(0) ptrm(30);
+      }
+
+      @include mobile {
+        padding: ptrm(0) ptrm(18);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: ptrm(30);
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    color: var(--color-dark);
+    font-family: "Unbounded", sans-serif;
+    font-weight: 500;
+    font-size: ptrm(36);
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__lead {
+    color: var(--color-text);
+    max-width: ptrm(440);
+    font-size: ptrm(16);
+    line-height: 137.5%;
+  }
+
+  &__actions {
+    display: flex;
+    gap: ptrm(5);
+    align-items: center;
+  }
+
+  &__art {
+    width: ptrm(720);
+    max-width: 58%;
+    position: absolute;
+    top: 50%;
+    right: ptrm(-80);
+    z-index: -1;
+    transform: translateY(-50%);
+    pointer-events: none;
+    filter: drop-shadow(ptrm(0) 30px 40px rgba(100, 140, 180, 0.18));
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__features {
+    margin-top: ptrm(-30);
+    padding: ptrm(30) ptrm(40);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: ptrm(40);
+    position: relative;
+    z-index: 3;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(211, 230, 245, 0.8);
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.7);
+  }
+}

@@ -1,0 +1,109 @@
+.metrics {
+  min-height: ptrm(720);
+  padding: ptrm(80) ptrm(0);
+  position: relative;
+  background: transparent;
+
+  @include mobile {
+    min-height: ptrm(0);
+    padding: ptrm(50) ptrm(0);
+  }
+
+  &__inner {
+    &.container {
+      padding: ptrm(0) ptrm(70);
+
+      @include mobile {
+        padding: ptrm(0) ptrm(18);
+      }
+    }
+  }
+
+  &__intro {
+    color: var(--color-dark);
+    max-width: ptrm(720);
+    padding: ptrm(28) ptrm(36);
+    position: relative;
+    z-index: 2;
+    font-size: ptrm(16);
+    line-height: 137.5%;
+    border-radius: var(--metrics-radius);
+    border: var(--metrics-border);
+    background: var(--metrics-bg);
+
+    @include mobile {
+      max-width: 100%;
+      padding: ptrm(18) ptrm(22);
+      font-size: ptrm(14);
+      line-height: 142.9%;
+    }
+  }
+
+  &__strong {
+    font-weight: 700;
+  }
+
+  &__map {
+    width: ptrm(1100);
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    z-index: 1;
+    opacity: 0.95;
+    pointer-events: none;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__numbers {
+    width: ptrm(580);
+    margin-top: ptrm(100);
+    margin-left: auto;
+    padding: ptrm(36) ptrm(40);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: ptrm(26) ptrm(40);
+    position: relative;
+    z-index: 2;
+    border-radius: var(--metrics-radius);
+    border: var(--metrics-border);
+    background: var(--metrics-bg);
+
+    @include mobile {
+      width: 100%;
+      margin-top: ptrm(30);
+      padding: ptrm(24) ptrm(28);
+      gap: ptrm(22) ptrm(24);
+    }
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.metrics-num {
+  &__value {
+    color: var(--color-dark);
+    font-family: "Onest", sans-serif;
+    font-weight: 800;
+    font-size: ptrm(40);
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: ptrm(32);
+    }
+  }
+
+  &__label {
+    color: var(--color-text-muted);
+    margin-top: ptrm(8);
+    font-size: ptrm(13);
+    line-height: 138.5%;
+  }
+}

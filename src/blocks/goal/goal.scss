@@ -1,0 +1,64 @@
+.goal-mission {
+  padding: ptrm(70) ptrm(0);
+  background: linear-gradient(180deg, #DCEBF6 0%, #C9DCEC 100%);
+
+  &__inner {
+    &.container {
+      padding: ptrm(0) ptrm(70);
+
+      @include tablet {
+        padding: ptrm(0) ptrm(30);
+      }
+
+      @include mobile {
+        padding: ptrm(0) ptrm(18);
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: ptrm(30);
+  }
+}
+
+.gm-card {
+  min-height: ptrm(360);
+  padding: ptrm(40) ptrm(44) ptrm(0);
+  position: relative;
+  overflow: hidden;
+  border-radius: ptrm(30);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.55);
+
+  &__title {
+    margin-bottom: ptrm(20);
+    font-size: ptrm(30);
+    font-weight: 700;
+  }
+
+  &__text {
+    color: var(--color-dark);
+    max-width: ptrm(480);
+    font-size: ptrm(18);
+    line-height: 144.4%;
+  }
+
+  &__icon-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  &__icon {
+    width: ptrm(260);
+    height: ptrm(220);
+    position: absolute;
+    right: ptrm(24);
+    bottom: ptrm(0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}

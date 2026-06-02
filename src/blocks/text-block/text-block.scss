@@ -1,0 +1,17 @@
+.text-block {
+  padding: ptrm(70) ptrm(0);
+
+  &__title {
+    margin-bottom: ptrm(20);
+    font-size: ptrm(32);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  &__text {
+    color: var(--color-text-muted);
+    max-width: ptrm(820);
+    font-size: ptrm(15);
+    line-height: 160%;
+  }
+}

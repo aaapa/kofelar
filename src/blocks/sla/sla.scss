@@ -1,0 +1,95 @@
+.sla {
+  padding: var(--svc-padding-y) ptrm(0);
+  background: linear-gradient(-30deg, rgba(25, 88, 153, 0.2) 0%, #e9f7ff 100%);
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    &.container {
+      padding: ptrm(0) ptrm(70);
+      position: relative;
+
+      @include tablet { padding: ptrm(0) ptrm(30); }
+      @include mobile { padding: ptrm(0) ptrm(18); }
+    }
+  }
+
+  &__head {
+    max-width: ptrm(680);
+    margin-bottom: ptrm(56);
+  }
+
+  &__title {
+    margin-bottom: ptrm(16);
+    font-size: ptrm(32);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  &__text {
+    color: var(--color-text-muted);
+    font-size: ptrm(14);
+    line-height: 157.1%;
+  }
+
+  &__bottom {
+    position: relative;
+    min-height: ptrm(180);
+  }
+
+  &__cards {
+    display: flex;
+    gap: ptrm(20);
+    position: relative;
+    z-index: 2;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    max-width: ptrm(270);
+    min-height: ptrm(180);
+    padding: ptrm(22) ptrm(24);
+    display: flex;
+    align-items: flex-start;
+    border-radius: var(--svc-radius);
+    backdrop-filter: blur(ptrm(15));
+    background: rgba(211, 230, 245, 0.20);
+    border: ptrm(1) solid rgba(255, 255, 255, 0.40);
+    box-shadow:
+      inset ptrm(0) ptrm(1) ptrm(1) rgba(255, 255, 255, 0.5),
+      ptrm(0) ptrm(8) ptrm(32) rgba(0, 0, 0, 0.03);
+
+    @include mobile {
+      max-width: none;
+    }
+  }
+
+  &__card-title {
+    color: var(--color-dark);
+    font-size: ptrm(16);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  &__art {
+    width: ptrm(700);
+    position: absolute;
+    right: ptrm(415);
+    bottom: ptrm(-64);
+    z-index: 1;
+    pointer-events: none;
+    filter: drop-shadow(0px 16px 40px rgba(100, 140, 180, 0.18));
+
+    @include tablet { display: none; }
+  }
+}
+
+

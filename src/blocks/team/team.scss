@@ -1,0 +1,118 @@
+.team {
+  padding: ptrm(70) ptrm(0);
+  background: linear-gradient(180deg, #E9F7FF 0%, #FFFFFF 100%);
+
+  &__inner {
+    &.container {
+      padding: ptrm(0) ptrm(70);
+
+      @include tablet {
+        padding: ptrm(0) ptrm(30);
+      }
+
+      @include mobile {
+        padding: ptrm(0) ptrm(18);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: ptrm(18);
+    font-size: ptrm(32);
+    font-weight: 700;
+  }
+
+  &__text {
+    color: var(--color-text-muted);
+    max-width: ptrm(880);
+    margin-bottom: ptrm(50);
+    font-size: ptrm(14);
+    line-height: 157.1%;
+  }
+
+  &__tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  &__head {
+    color: var(--color-dark);
+    margin-bottom: ptrm(30);
+    padding: ptrm(14) ptrm(60);
+    font-size: ptrm(17);
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    background: rgba(211, 230, 245, 0.4);
+  }
+
+  &__lines {
+    width: 100%;
+    height: ptrm(30);
+    position: relative;
+
+    &::before {
+      content: "";
+      height: ptrm(1);
+      position: absolute;
+      top: ptrm(0);
+      right: 12.5%;
+      left: 12.5%;
+      background: var(--team-line-color);
+    }
+  }
+
+  &__line {
+    width: ptrm(1);
+    height: ptrm(30);
+    position: absolute;
+    top: ptrm(0);
+    background: var(--team-line-color);
+
+    &--1 { left: 12.5%; }
+    &--2 { left: 37.5%; }
+    &--3 { left: 62.5%; }
+    &--4 { left: 87.5%; }
+  }
+
+  &__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: ptrm(24);
+  }
+}
+
+.team-card {
+  min-height: ptrm(250);
+  padding: ptrm(24) ptrm(24) ptrm(0);
+  position: relative;
+  overflow: hidden;
+  border-radius: ptrm(26);
+  border: 1px solid rgba(211, 230, 245, 0.8);
+  background: rgba(255, 255, 255, 0.7);
+
+  &__title {
+    margin-bottom: ptrm(14);
+    font-size: ptrm(17);
+    font-weight: 600;
+  }
+
+  &__icon {
+    width: ptrm(140);
+    height: ptrm(140);
+    position: absolute;
+    right: ptrm(12);
+    bottom: ptrm(16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}

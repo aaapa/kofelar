@@ -1,0 +1,16 @@
+<dialog class="modal" data-js-modal data-js-modal-callback aria-labelledby="modal-title">
+  <div class="modal__inner container">
+    <div class="modal__content" data-js-modal-content>
+      <button class="modal__close" data-js-modal-close-button><span class="visually-hidden">Закрыть</span><svg class="icon" width="14" height="14"><use href="#icon-close"/></svg></button>
+      <h2 class="modal__title title title--medium" id="modal-title">Давайте начнём сотрудничество уже сегодня!</h2>
+      <form class="form" novalidate>
+        <div class="form__field"><label class="form__label" for="f-name">Ваше имя:</label><input class="input" id="f-name" type="text" placeholder="Иван" required /></div>
+        <div class="form__field"><label class="form__label" for="f-phone">Номер телефона:</label><input class="input" id="f-phone" type="tel" data-js-phone-mask placeholder="+7 (917) 123-45-67" required /></div>
+        <div class="form__field"><label class="form__label" for="f-mail">Электронная почта:</label><input class="input" id="f-mail" type="email" placeholder="example@mail.com" /></div>
+        <div class="form__field"><label class="form__label" for="f-msg">Комментарий:</label><textarea class="input input--textarea" id="f-msg" placeholder="Введите текст"></textarea></div>
+        <label class="form__check"><input type="checkbox" required /><span>Я даю согласие на обработку персональных данных</span></label>
+        <button class="form__submit" type="submit">Оставить заявку</button>
+      </form>
+    </div>
+  </div>
+</dialog>

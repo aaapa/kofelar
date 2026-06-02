@@ -1,0 +1,162 @@
+.erp {
+  padding-block: ptrm(50) ptrm(250);
+  position: relative;
+  background: transparent;
+
+  @include mobile {
+    padding-block: ptrm(30);
+  }
+
+  &__inner {
+    &.container {
+      padding: ptrm(0) ptrm(70);
+
+      @include tablet { padding: ptrm(0) ptrm(30); }
+      @include mobile { padding: ptrm(0) ptrm(18); }
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transform: translateY(-30px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      top: 100%;
+      left: 50%;
+      height: ptrm(30);
+      background: rgba(17, 27, 34, 0.2);
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__head-card {
+    color: var(--color-white);
+    padding: ptrm(14) ptrm(50);
+    display: inline-flex;
+    align-items: center;
+    font-size: ptrm(17);
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    background: var(--color-dark);
+  }
+
+  &__lines {
+    height: ptrm(50);
+    margin: ptrm(0) auto ptrm(0);
+    max-width: ptrm(1000);
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 2px;
+      position: absolute;
+      right: 12.5%;
+      top: ptrm(0);
+      left: 12.5%;
+      background: rgba(17, 27, 34, 0.2);
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__line {
+    width: 2px;
+    position: absolute;
+    top: ptrm(0);
+    bottom: ptrm(0);
+    background: rgba(17, 27, 34, 0.2);
+
+    &--1 { left: 12.5%; }
+    &--2 { left: 37.5%; }
+    &--3 { left: 62.5%; }
+    &--4 { left: 87.5%; }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    gap: ptrm(18);
+    position: relative;
+    z-index: 2;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__gradient {
+    position: absolute;
+    width: ptrm(639);
+    height: ptrm(857);
+    left: ptrm(-295);
+    top: ptrm(226);
+    background: rgba(25, 88, 153, 0.1);
+    filter: blur(ptrm(75));
+    transform: rotate(127.06deg);
+    pointer-events: none;
+    z-index: 0;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__bg {
+    width: ptrm(821);
+    position: absolute;
+    right: ptrm(45);
+    bottom: ptrm(-20);
+    z-index: 1;
+    opacity: 0.9;
+    pointer-events: none;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.erp-card {
+  min-height: ptrm(240);
+  padding: ptrm(26) ptrm(24);
+  display: flex;
+  flex-direction: column;
+  border-radius: ptrm(22);
+  border: 1px solid rgba(183, 215, 240, 0.9);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), 0 4px 16px rgba(100, 160, 210, 0.1);
+  position: relative;
+  z-index: 2;
+
+  &__title {
+    color: var(--color-dark);
+    margin-bottom: ptrm(14);
+    font-size: ptrm(16);
+    font-weight: 600;
+    line-height: 137.5%;
+  }
+
+  &__text {
+    color: var(--color-text-muted);
+    font-size: ptrm(13);
+    line-height: 138.5%;
+  }
+}
